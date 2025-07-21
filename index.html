@@ -22,14 +22,21 @@
     </style>
   </head>
   <body>
-    <h1>Sistem Götten Yiyor...</h1>
-    <audio src="hakir-muzigi.mp3" autoplay loop></audio>
-    <script>
-      alert("He Dedin Yarrağı Yedin Görüşürüz Pampa.");
-      console.log("Dosyalar Sikiliyor...");
-      setInterval(() => {
-        document.body.innerHTML += "<br>Dosyalar Sikiliyor...";
-      }, 500);
-    </script>
-  </body>
+  <h1>Sistem Götten Yiyor...</h1>
+  <audio src="hakir_muzigi.mp3" autoplay loop></audio>
+
+  <div id="log"></div>  <!-- Metinlerin ekleneceği alan -->
+
+  <script>
+    alert("He Dedin Yarrağı Yedin Görüşürüz Pampa.");
+    console.log("Dosyalar Sikiliyor...");
+
+    const logDiv = document.getElementById('log');
+    setInterval(() => {
+      const newLine = document.createElement('div');
+      newLine.textContent = "Dosyalar Sikiliyor...";
+      logDiv.appendChild(newLine);
+    }, 500);
+  </script>
+</body>
 </html>
