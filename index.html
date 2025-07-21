@@ -19,32 +19,15 @@
         50% { opacity: 0.5; }
         100% { opacity: 1; }
       }
-      #log {
-        margin-top: 20px;
-        font-size: 18px;
-        text-align: left;
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
     </style>
   </head>
   <body>
     <h1>Sistem Götten Yiyor...</h1>
-
-    <audio src="hakir_muzigi.mp3" autoplay loop></audio>
-
-    <div id="log"></div> <!-- Metinlerin ekleneceği alan -->
-
     <script>
       alert("He Dedin Yarrağı Yedin Görüşürüz Pampa.");
       console.log("Dosyalar Sikiliyor...");
-
-      const logDiv = document.getElementById('log');
       setInterval(() => {
-        const newLine = document.createElement('div');
-        newLine.textContent = "Dosyalar Sikiliyor...";
-        logDiv.appendChild(newLine);
+        document.body.innerHTML += "<br>Dosyalar Sikiliyor...";
       }, 500);
     </script>
   </body>
